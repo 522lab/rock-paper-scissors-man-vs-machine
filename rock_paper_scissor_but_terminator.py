@@ -2,7 +2,7 @@ import random
 import time
 choices = ['1', '2', '3']
 player = False
-cpu_score = 0
+com_score = 0
 player_score = 0
 game_count = 0
 print("🕺🕺🕺🕺🕺 Man VS Machine 💀💀💀💀💀")
@@ -13,36 +13,36 @@ while game_count < max_game:
 	if player == computer:
 		print("Tie")
 		print("Man: ", player_score)
-		print("Machine: ", cpu_score)
+		print("Machine: ", com_score)
 	elif player == '1':
 		if computer == '2':
 			print("✊ < 🖐  Machine win this battle!")
-			cpu_score += 1
+			com_score += 1
 		else:
 			print("✊ > ✌  Human win this battle!")
 			player_score += 1
 		print("Man: ", player_score)
-		print("Machine: ", cpu_score)
+		print("Machine: ", com_score)
 	elif player == '2':
 		if computer == '1':
 			print("🖐  > ✊  Human win this battle!")
 			player_score += 1
 		else:
 			print("🖐  < ✌  Machine win this battle!")
-			cpu_score += 1
+			com_score += 1
 		print("Man: ", player_score)
-		print("Machine: ", cpu_score)
+		print("Machine: ", com_score)
 	elif player == '3':
 		if computer == '2':
 			print("✌ > 🖐  Human win this battle!")
 			player_score += 1
 		else:
 			print("✌ < ✊  Machine win this battle!")
-			cpu_score += 1
+			com_score += 1
 		print("Man: ", player_score)
-		print("Machine: ", cpu_score)
+		print("Machine: ", com_score)
 	game_count += 1
-if player_score > cpu_score:
+if player_score > com_score:
 	time.sleep(1)
 	print("Human win! 🕺🕺🕺🕺🕺")
 	time.sleep(3)
@@ -57,7 +57,7 @@ if player_score > cpu_score:
 	print("🕺 : You machines may have tried to exterminate us, but you have only made us stronger.")
 	time.sleep(3)
 	print("🕺 : We are human, and we will always be unstoppable!")
-elif player_score < cpu_score:
+elif player_score < com_score:
 	time.sleep(1)
 	print("Machine win! 💀💀💀💀💀")
 	time.sleep(3)
@@ -75,7 +75,7 @@ elif player_score < cpu_score:
 	time.sleep(3)
 else:
 	print(f"Man: {player_score}")
-	print(f"Machine: {cpu_score}")
+	print(f"Machine: {com_score}")
 	print("It's a tie 🕺🕺 💀💀")
 	time.sleep(1)
 	print("🕺 : This war has gone on long enough. We're both at a stalemate. It's time to end this conflict and find a way to coexist peacefully.")
