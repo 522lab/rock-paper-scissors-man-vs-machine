@@ -12,6 +12,8 @@ while game_count < max_game:
 	player = (input("choose your weapon, ✊(1), 🖐 (2), ✌ (3) : "))
 	if player == computer:
 		print("Tie")
+		print("Man: ", player_score)
+		print("Machine: ", cpu_score)
 	elif player == '1':
 		if computer == '2':
 			print("✊ < 🖐  Machine win this battle!")
